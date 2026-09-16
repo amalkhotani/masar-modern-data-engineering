@@ -1,3 +1,29 @@
+# مشروع أمل خوتاني — MASAR
+
+أُنجز هذا المشروع ضمن برنامج **هندسة البيانات الحديثة لأنظمة الذكاء الاصطناعي — Modern Data Engineering for AI Systems (SDA-DSC-214)** لدى [أكاديمية سدايا — SDAIA Academy](https://github.com/SDAIAAcademy).
+
+#SDAIAAcademy
+
+## فكرة المشروع
+
+معالجة بيانات اصطناعية للرحلات والسائقين وأحداث المواقع، وبناء طبقات Bronze وSilver وGold، والتحقق من الجودة وتجهيز بيانات AI وBI.
+
+## نتائج التنفيذ
+
+- 75 رحلة معتمدة.
+- إجمالي الأجور: 1,880.60 ريال.
+- 217 حدث GPS مختلفًا.
+- نجاح فحوص لاب 7 الأربعة وفحوص لاب 8 الستة عشر.
+- البيانات اصطناعية، ولم يُدرّب نموذج تنبؤ.
+
+استُخدمت مواد الدورة ودوالها التي أعدتها **ميعاد المري — Meaad Al-Marri**، مع تهيئة البيئة وتشغيل اللابات وتوثيق النتائج.
+
+---
+
+
+
+
+
 <table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><p>SDAIA Academy · Learner materials</p><h1>Modern Data Engineering<br>for AI Systems</h1><h2>MASAR · Mini-Lakehouse</h2><p><strong>Meaad Al-Marri</strong><br>SDA-DSC-214 · Five days · Eight cumulative labs</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><p>أكاديمية سدايا · مواد المتدرب</p><h1>هندسة البيانات الحديثة<br>لأنظمة الذكاء الاصطناعي</h1><h2>مسار · بيئة بيانات مصغرة</h2><p><strong>ميعاد المري</strong><br>SDA-DSC-214 · خمسة أيام · ثمانية لابات تراكمية</p></td></tr></table>
 
 <table dir="ltr" width="100%"><tr><td width="50%" dir="ltr" lang="en" align="left" valign="top"><h2>What you will build</h2><p>Turn small synthetic trip, driver and location feeds into a reliable data pipeline: preserve the source, build Silver, manage changes, receive events, check quality and deliver reporting and AI-ready tables.</p><p><strong>The labs are your final project.</strong> Complete them in sequence; no separate final assignment is added.</p></td><td width="50%" dir="rtl" lang="ar" align="right" valign="top"><h2>ماذا ستبني؟</h2><p>حوّل ملفات اصطناعية صغيرة للرحلات والسائقين والمواقع إلى خط بيانات موثوق: احفظ المصدر، وابنِ Silver، وأدر التغييرات، واستقبل الأحداث، وافحص الجودة، ثم جهّز جداول التقارير والذكاء الاصطناعي.</p><p><strong>اللابات هي مشروعك النهائي.</strong> أكملها بالتتابع دون تكليف نهائي منفصل.</p></td></tr></table>
