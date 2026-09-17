@@ -1,0 +1,65 @@
+name: Verify Amal submission
+on:
+  push:
+    branches: [develop]
+    paths:
+      - .github/workflows/verify-amal-submission.yml
+      - scripts/recheck_native_submission.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install course dependencies
+        run: |
+          python -m pip install -r requirements-course.txt -r requirements-day01.txt
+          python -m pip check
+      - name: Start local synthetic-data broker
+        run: docker compose -f infrastructure/kafka/compose.yaml up -d --wait --wait-timeout 180
+      - name: Execute fresh cumulative pipeline and dbt
+        run: python scripts/recheck_native_submission.py
+      - name: Retain results and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-recheck-${{ github.run_id }}
+          retention-days: 30
+          path: |
+            native_recheck.zip
+            outputs/native_recheck.json
+            outputs/recheck_logs/
+      - name: Publish verified output archive
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result = json.loads(Path('outputs/native_recheck.json').read_text())
+          assert result['status'] == 'PASSED_NATIVE_PIPELINE_AND_DBT'
+          assert len(result['completed_stages']) == 10
+          Path('release-notes.txt').write_text(
+              'Fresh native pipeline and dbt verification for commit ' + result['commit'] + '.\n\n'
+              'The archive contains actual outputs, Delta artifacts and logs from this new run. '
+              'Historical student notebooks are unchanged and were not reexecuted by this workflow.\n\n'
+              'Modern Data Engineering for AI Systems (SDA-DSC-214), SDAIA Academy. '
+              'Course materials: Meaad Al-Marri. #SDAIAAcademy\n')
+          PY
+          gh release create "verification-${GITHUB_RUN_ID}" native_recheck.zip --target "$GITHUB_SHA" --title "Verified native submission ${GITHUB_RUN_ID}" --notes-file release-notes.txt
