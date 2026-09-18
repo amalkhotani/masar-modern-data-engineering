@@ -1,5 +1,7 @@
 # EVIDENCE INDEX — فهرس الأدلة والبيئة
 
+**تحديث 2026-09-18:** نجحت [إعادة مستقلة كاملة](https://github.com/amalkhotani/masar-modern-data-engineering/actions/runs/35267123057) للمسار وdbt، ونُشر [أرشيف نتائجها](https://github.com/amalkhotani/masar-modern-data-engineering/releases/tag/verification-35267123057) متضمنًا تقريري المصدر والتكلفة المنفصلين. [فهرس المحاولة الجديدة](submission/README.md). التفاصيل أدناه توثق الأدلة التاريخية الأصلية، لا هذه المحاولة الجديدة.
+
 أمل خوتاني — Amal Khotani. برنامج **هندسة البيانات الحديثة لأنظمة الذكاء الاصطناعي — Modern Data Engineering for AI Systems (SDA-DSC-214)**، [أكاديمية سدايا](https://github.com/SDAIAAcademy). #SDAIAAcademy
 
 مواد الدورة ودوالها: **ميعاد المري — Meaad Al-Marri**. هذه ملاحظات مبنية على المخرجات المحفوظة في الدفتر المرفوع والتقارير الأصلية؛ لم يُعد تشغيل Spark أثناء إعدادها. تفاصيل البيئة وبصمات الأدلة وحدود التحقق في [EVIDENCE_INDEX.md](EVIDENCE_INDEX.md).

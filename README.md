@@ -60,13 +60,15 @@
 - القرارات: [المعمارية والتنفيذ](DECISIONS.md)، [الأداء والتكلفة](BENCHMARKS.md)، [الحوكمة](GOVERNANCE.md).
 - [فهرس الأدلة والبيئة](EVIDENCE_INDEX.md)، [تنظيم الدفاتر](NOTEBOOK_ORGANIZATION.md)، [قائمة متابعة التسليم](SUBMISSION_CHECKLIST.md).
 
-**رابط المخرجات المحفوظة:** يضاف رابط قابل للوصول عبر قناة التسليم المعتمدة قبل الإرسال النهائي.
+**رابط المخرجات المحفوظة:** [تنزيل native_recheck.zip](https://github.com/amalkhotani/masar-modern-data-engineering/releases/download/verification-35267123057/native_recheck.zip) · [صفحة الإصدار](https://github.com/amalkhotani/masar-modern-data-engineering/releases/tag/verification-35267123057) · [فهرس المحتويات ودليل التحقق](submission/README.md).
 
 ## حالة تجهيز التسليم
 
 جُهزت الدفاتر اليومية الخمسة وملاحظات اللابات والقرارات من المخرجات الفعلية. بعد فقد ملفات dbt القديمة أُعيد تشغيل مشغّل المقرر على نسخ معزولة من Bronze، وحُفظت أدلته في `dbt_evidence_83b24dcb.zip`. تقرير المحاولة الجديدة `outputs/dbt_validation_tedk3wzl/reports/dbt_attempt.json` وحالته `PASSED_DBT_NATIVE`؛ التوثيق المولد يغطي 6 نماذج و3 مصادر.
 
-لم يختبر Run all نظيف بعد فصل الدفاتر. بقيت خلية إعداد مضافة غير منفذة في دفتر اليوم الخامس، كما توضح وثيقة التنظيم. نتائج فحص المصدر والتكلفة مطبوعة في اليوم الأول، لكن ملفي JSON الأصليين لم يرفقا بعد. يبقى استكمال رابط المخرجات وفحص النسخ المرفوعة وأخذ معرف التعديل النهائي؛ تفاصيل الحالة في قائمة المتابعة.
+**نجحت إعادة تنفيذ مستقلة كاملة بتاريخ 2026-09-17:** [GitHub Actions](https://github.com/amalkhotani/masar-modern-data-engineering/actions/runs/35267123057) نفّذ مشغلات الأيام الخمسة وdbt من مساحة جديدة باستخدام Python 3.11.16 وJava 17. الحالة `PASSED_NATIVE_PIPELINE_AND_DBT`، ونجحت 76 فحوص عبر 10 مراحل تمثل اللابات الثمانية. شملت المحاولة Spark وDelta وKafka وGreat Expectations وdbt، وحُفظت مخرجاتها الفعلية وتقارير فحص المصدر والتكلفة وتوثيق dbt في الإصدار المرتبط أعلاه.
+
+هذه محاولة جديدة للشفرة `79b2c19720bd569e68571a6027e7a832c8eca628`، وليست استرجاعًا لملفي JSON المفقودين من جلسة Colab. بقيت الدفاتر التاريخية ومخرجاتها دون تعديل؛ لم يُختبر Run all لها بعد فصلها، وما زالت خلية إعداد مضافة في اليوم الخامس غير منفذة. لا تنسب نتائج التشغيل الآلي إلى تلك الخلايا. [ملخص التنفيذ](submission/native_recheck.json) و[قائمة متابعة التسليم](SUBMISSION_CHECKLIST.md).
 
 ## حدود النتائج
 

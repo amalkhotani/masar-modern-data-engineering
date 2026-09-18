@@ -1,0 +1,91 @@
+{
+  "scope": "NEW_NATIVE_PIPELINE_AND_DBT_RECHECK",
+  "started_at": "2026-09-17T19:50:56.506619+00:00",
+  "status": "PASSED_NATIVE_PIPELINE_AND_DBT",
+  "commit": "79b2c19720bd569e68571a6027e7a832c8eca628",
+  "python": "3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]",
+  "historical_notebooks_reexecuted": false,
+  "commands": [
+    {
+      "script": "run_day01",
+      "started_at": "2026-09-17T19:50:56.509972+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:51:28.930453+00:00"
+    },
+    {
+      "script": "run_day02",
+      "started_at": "2026-09-17T19:51:28.930498+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:52:18.760328+00:00"
+    },
+    {
+      "script": "run_dbt",
+      "started_at": "2026-09-17T19:52:18.760372+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:53:44.897003+00:00"
+    },
+    {
+      "script": "run_day03",
+      "started_at": "2026-09-17T19:53:44.897054+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:55:06.392981+00:00"
+    },
+    {
+      "script": "run_day04",
+      "started_at": "2026-09-17T19:55:06.393020+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:55:53.638159+00:00"
+    },
+    {
+      "script": "run_day05",
+      "started_at": "2026-09-17T19:55:53.638243+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-17T19:56:39.752204+00:00"
+    }
+  ],
+  "completed_stages": [
+    {
+      "name": "lab01_bronze",
+      "checks_passed": 7
+    },
+    {
+      "name": "lab02_scan",
+      "checks_passed": 4
+    },
+    {
+      "name": "lab03a_staging",
+      "checks_passed": 5
+    },
+    {
+      "name": "lab03b_silver",
+      "checks_passed": 5
+    },
+    {
+      "name": "lab04a_transactions",
+      "checks_passed": 6
+    },
+    {
+      "name": "lab04b_maintenance",
+      "checks_passed": 7
+    },
+    {
+      "name": "lab05_streaming",
+      "checks_passed": 13
+    },
+    {
+      "name": "lab06_quality",
+      "checks_passed": 9
+    },
+    {
+      "name": "lab07_gold_recovery",
+      "checks_passed": 4
+    },
+    {
+      "name": "lab08_serving",
+      "checks_passed": 16
+    }
+  ],
+  "workspace": "outputs/day01_engine_k59q9hgr",
+  "dbt_report": "outputs/dbt_validation_9ogwpqiz/reports/dbt_attempt.json",
+  "finished_at": "2026-09-17T19:56:39.764757+00:00"
+}

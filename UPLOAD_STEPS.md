@@ -1,14 +1,10 @@
-# رفع حزمة التحديث إلى GitHub
+# الوصول إلى النسخة المحدثة
 
-1. فك ضغط Masar_Submission_Update.zip على جهازك.
-2. افتح مستودع amalkhotani/masar-modern-data-engineering وحدد فرع develop.
-3. من جذر المستودع افتح Upload files. اسحب المجلدات day01 إلى day05 وجميع ملفات Markdown الظاهرة بجانبها من الحزمة.
-4. تأكد أن المسار يظهر day01/STUDENT.ipynb وأن day02 يحتوي STUDENT.ipynb وDBT_RECOVERY.ipynb. لا ترفع المجلد الخارجي الذي يحمل اسم ZIP فوقها.
-5. راجع الفرق ثم احفظ التعديل على develop برسالة مثل Update submission notebooks and verified dbt evidence.
-6. افتح README والدفاتر بعد الرفع وتحقق من المخرجات والروابط. بعدها شارك رابط فرع develop للمراجعة.
+التعديلات موجودة مباشرة على [فرع develop](https://github.com/amalkhotani/masar-modern-data-engineering/tree/develop)، ولا يلزم رفع حزمة التحديث القديمة مرة ثانية.
 
-تحوي الحزمة ملفات الطالب المقصودة فقط. ستحدّث ملفات STUDENT.ipynb الخمسة وREADME والملاحظات الموجودة بالأسماء نفسها؛ بقية مواد المقرر ليست ضمن الحزمة. يحتفظ README بمواد الدورة الأصلية ونسبتها.
+1. افتحي [فهرس الأدلة](submission/README.md) ورابط الأرشيف في README.
+2. راجعي [التشغيل الكامل الناجح](https://github.com/amalkhotani/masar-modern-data-engineering/actions/runs/35267123057) والحدود في [قائمة التسليم](SUBMISSION_CHECKLIST.md).
+3. انسخي معرف آخر commit من develop بعد انتهاء التعديلات، وأرسليه مع رابط الفرع عبر قناة الجهة المنظمة.
+4. أدرجي اسم البرنامج وأكاديمية سدايا والوسم #SDAIAAcademy في رسالة التسليم.
 
-احتفظ بملفي day05_handoff.zip وdbt_evidence_83b24dcb.zip خارج Git وفق دليل المقرر، وشاركهما عبر القناة المعتمدة ثم أضف رابط الوصول الفعلي إلى README. ملف ZIP هذا يجمع الدفاتر والملاحظات للرفع ولا يحتوي أرشيفات البيانات.
-
-مخرجات dbt الجديدة محفوظة في ملحق Day02. تبقى بنود متابعة المصدر والتكلفة ورابط المخرجات ومعرف commit النهائي موضحة في SUBMISSION_CHECKLIST.md. إنشاء هذه الحزمة لا يعني أنها رُفعت إلى GitHub أو سُلّمت إلى الجهة تلقائيًا.
+المخرجات محفوظة في Releases. لا ترفعي outputs أو ملفات Delta أو caches إلى تاريخ Git.
